@@ -8,31 +8,28 @@ html(lang="en" dir="ltr")
     link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
     link(rel='stylesheet', href='/static/css/normalize.css')
     link(rel='stylesheet', href='/static/css/styles.css')
-
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
   body
     #my-info.sidebar
       .sidebar-info-box
         br
+
         .thumbnail-box
-          img.thumbnail(src='../static/images/download.png ', alt='')
+          img.thumbnail(src='../static/images/download.png ', alt='Me')
         .dev-intro-box
 
-          //- Replace with your name
           h5 Bruno Godinho
 
-          //- Replace with description of who you are, what you do, and why you are so awesome
           p I am a self taugh Web-developer with a great passion to learn how to create awsome applications and websites that people will love
 
-          //- Add path from your '/about' route handler to the href below
-          a(href='https://www.linkedin.com/in/bruno-godinho-37262912/') Learn More &rarr;
+          a(href='/about') Learn More &rarr;
 
     .wrapper
       .header
         .header-info-box
           button#menu-icon.menu-icon(type='button' data-toggle='my-info')
 
-          //- Replace with your name — this is for the mobile layout
-          span Name
+          span Bruno Godinho
 
       block content
 
