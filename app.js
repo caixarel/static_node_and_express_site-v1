@@ -33,11 +33,12 @@ app.use((req,res,next)=>{
 //global error handler
 app.use((err,req,res,next)=>{
     if (err.status== 404){
-        err.message = 'Error occured , page not found.'
+        err.message = 'Error occured , page not found.';
+        console.log('Error 404 page-not-found');
         res.render('page-not-found',{err});
     }
     else{
-        err.message = 'Error , return to main page '
+        err.message = 'Error , return to main page ';
         err.status=500;
         res.render('error',{err});
     }
